@@ -13,6 +13,7 @@
 		125455691ADE2E290023021D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 125455681ADE2E290023021D /* Images.xcassets */; };
 		1254556C1ADE2E290023021D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1254556A1ADE2E290023021D /* LaunchScreen.xib */; };
 		125455781ADE2E290023021D /* TableViewPlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125455771ADE2E290023021D /* TableViewPlaygroundTests.swift */; };
+		125455821AE0E4840023021D /* RankingListViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125455811AE0E4840023021D /* RankingListViewControllerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		125455711ADE2E290023021D /* TableViewPlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewPlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		125455761ADE2E290023021D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		125455771ADE2E290023021D /* TableViewPlaygroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewPlaygroundTests.swift; sourceTree = "<group>"; };
+		125455811AE0E4840023021D /* RankingListViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingListViewControllerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				125455681ADE2E290023021D /* Images.xcassets */,
 				1254556A1ADE2E290023021D /* LaunchScreen.xib */,
 				1254555F1ADE2E280023021D /* Supporting Files */,
+				125455811AE0E4840023021D /* RankingListViewControllerTableViewController.swift */,
 			);
 			path = TableViewPlayground;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				125455821AE0E4840023021D /* RankingListViewControllerTableViewController.swift in Sources */,
 				125455641ADE2E290023021D /* ViewController.swift in Sources */,
 				125455621ADE2E290023021D /* AppDelegate.swift in Sources */,
 			);

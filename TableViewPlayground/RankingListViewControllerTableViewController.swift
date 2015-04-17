@@ -10,6 +10,8 @@ import UIKit
 
 class RankingListViewControllerTableViewController: UITableViewController {
 
+    let emoji = ["yo", "whats up"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,24 +32,27 @@ class RankingListViewControllerTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return emoji.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("EmojiCell", forIndexPath: indexPath) as UITableViewCell
 
         // Configure the cell...
 
+        let emojiCell = emoji[indexPath.row] as String
+        cell.textLabel?.text = emojiCell
+        cell.detailTextLabel?.text = emojiCell        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
