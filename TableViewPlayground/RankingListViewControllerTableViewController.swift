@@ -10,7 +10,7 @@ import UIKit
 
 class RankingListViewControllerTableViewController: UITableViewController {
 
-    let emoji = ["yo", "whats up"]
+    var emoji = ["yo", "whats up"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +20,55 @@ class RankingListViewControllerTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        
+        var refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: Selector("fetchRanking"), forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl = refreshControl
+        
     }
 
+    func fetchRanking() {
+        
+        
+        let url = NSURL(string: "http://fb-emoji-bananaplan.meteor.com/emojiiiii")
+        
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data: NSData!, response:NSURLResponse!,
+            error: NSError!) -> Void in
+            //do something
+            var index = 0
+            let httpResponse = NSString(data: data, encoding: NSUTF8StringEncoding)!
+            println(httpResponse)
+            var data: NSData = httpResponse.dataUsingEncoding(NSUTF8StringEncoding)!
+            var error: NSError?
+            let anyObj: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0),
+                error: &error)
+            if let jsonObj = anyObj as? NSDictionary {
+                if let jsonData = jsonObj["data"] as? NSArray {
+                    for jsonItem in jsonData as [AnyObject]{
+                        if let rankData = jsonItem as? NSDictionary {
+                            if let rankTitle = rankData["editor"] as? NSString {
+                                println("title : \(rankTitle)")
+                                self.emoji[index] = rankTitle
+                                index++
+                            }
+                        }
+                    }
+                }
+            }
+            
+            self.tableView.reloadData()
+            
+            
+            
+        })
+        task.resume()
+        
+
+        refreshControl?.endRefreshing()
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,10 +93,10 @@ class RankingListViewControllerTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("EmojiCell", forIndexPath: indexPath) as UITableViewCell
 
         // Configure the cell...
-
+        
         let emojiCell = emoji[indexPath.row] as String
         cell.textLabel?.text = emojiCell
-        cell.detailTextLabel?.text = emojiCell        
+        cell.detailTextLabel?.text = emojiCell
         return cell
     }
     

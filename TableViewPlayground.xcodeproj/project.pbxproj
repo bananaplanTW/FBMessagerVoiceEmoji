@@ -14,6 +14,7 @@
 		1254556C1ADE2E290023021D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1254556A1ADE2E290023021D /* LaunchScreen.xib */; };
 		125455781ADE2E290023021D /* TableViewPlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125455771ADE2E290023021D /* TableViewPlaygroundTests.swift */; };
 		125455821AE0E4840023021D /* RankingListViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125455811AE0E4840023021D /* RankingListViewControllerTableViewController.swift */; };
+		12BCFF8C1AE39BF700EB4C61 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BCFF8B1AE39BF700EB4C61 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		125455761ADE2E290023021D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		125455771ADE2E290023021D /* TableViewPlaygroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewPlaygroundTests.swift; sourceTree = "<group>"; };
 		125455811AE0E4840023021D /* RankingListViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingListViewControllerTableViewController.swift; sourceTree = "<group>"; };
+		12BCFF8B1AE39BF700EB4C61 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		125455531ADE2E280023021D = {
 			isa = PBXGroup;
 			children = (
+				12BCFF8B1AE39BF700EB4C61 /* SwiftyJSON.swift */,
 				1254555E1ADE2E280023021D /* TableViewPlayground */,
 				125455741ADE2E290023021D /* TableViewPlaygroundTests */,
 				1254555D1ADE2E280023021D /* Products */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12BCFF8C1AE39BF700EB4C61 /* SwiftyJSON.swift in Sources */,
 				125455821AE0E4840023021D /* RankingListViewControllerTableViewController.swift in Sources */,
 				125455641ADE2E290023021D /* ViewController.swift in Sources */,
 				125455621ADE2E290023021D /* AppDelegate.swift in Sources */,
@@ -409,6 +413,7 @@
 				1254557D1ADE2E290023021D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1254557E1ADE2E290023021D /* Build configuration list for PBXNativeTarget "TableViewPlaygroundTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				125455801ADE2E290023021D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
